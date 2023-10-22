@@ -1,0 +1,54 @@
+.theme_white div.header-label-component-container {
+  background: #fff !important;
+}
+.theme_white div.intro-my-self-box h1,
+.theme_white div.project-list-box h1,
+.theme_white div.content-box h1 {
+  color: #333 !important;
+}
+.theme_white div.intro-my-self-box div,
+.theme_white div.project-list-box div,
+.theme_white div.content-box div {
+  color: #6c6c6c !important;
+}
+.theme_white div.intro-my-self-box div span.strong,
+.theme_white div.project-list-box div span.strong,
+.theme_white div.content-box div span.strong {
+  color: red !important;
+}
+.theme_white div.project-card-component-container .el-card__body {
+  background: #fff !important;
+}
+.theme_white div.project-card-component-container span {
+  color: #6C6C6C !important;
+}
+.theme_white div.project-card-component-container span:first-child {
+  color: #333 !important;
+}
+.theme_white div.title-and-subtle span {
+  color: #333 !important;
+}
+.theme_white div.title-and-subtle span.skill-intro {
+  color: #6C6C6C !important;
+}
+.theme_white a {
+  color: #6c6c6c !important;
+}
+.theme_white a:hover {
+  color: #333 !important;
+}
+.theme_white ul li {
+  color: #6c6c6c !important;
+}
+.theme_white ul li:nth-of-type(2n-1):hover {
+  color: #333 !important;
+}
+.theme_white ul li:nth-of-type(2n-1).active {
+  color: #333 !important;
+}
+.theme_black .tool-btn {
+  background: blue !important;
+}
+.theme_black span {
+  color: #fff !important;
+}

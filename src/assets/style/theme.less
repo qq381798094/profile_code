@@ -1,0 +1,80 @@
+.theme_white {
+    // 公共div
+    div {
+        // 头标题
+        &.header-label-component-container {
+            background: #fff !important;
+        }
+        // 自我介绍 && 项目集 && 技能栏
+        &.intro-my-self-box,
+        &.project-list-box,
+        &.content-box{
+            h1 {
+                color: #333 !important;
+            }
+            div {
+                color: #6c6c6c !important;
+                
+                span {
+                    &.strong {
+                        color: red !important;
+                    }
+                }
+            }
+        }
+
+        // 卡片item
+        &.project-card-component-container{
+            // 外壳
+            .el-card__body{
+                background: #fff !important;
+            }
+            // 文字
+            span {
+                color: #6C6C6C !important;
+                &:first-child {
+                    color: #333 !important;
+                }
+            }
+        }
+
+        // 技能熟练度div
+        &.title-and-subtle {
+            span {
+                color: #333 !important;
+                &.skill-intro {
+                    color: #6C6C6C !important;
+                }
+            }
+        }
+    }
+    a {
+        color: #6c6c6c !important;
+        &:hover {
+            color: #333 !important;
+        }
+    }
+    ul {
+        li {
+            color: #6c6c6c !important;
+            &:nth-of-type(2n-1) {
+                &:hover {
+                    color: #333 !important;
+                }
+                &.active {
+                    color: #333 !important;
+                }
+            }
+            
+        }
+    }
+}
+
+.theme_black {
+    .tool-btn {
+        background: blue !important;
+    }
+    span {
+        color: #fff !important;
+    }
+}
