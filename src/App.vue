@@ -1,5 +1,5 @@
 <template>
-  <div class="container" :class="{'theme_white': switchFlag}">
+  <div class="container">
     <!-- 头部标签 -->
     <header-view @switchChangeFlag="switchFlagChange" />
     <!-- 身体标签 -->
@@ -27,23 +27,11 @@
 import HeaderView from '@/components/headerLabel/index.vue';
 
 import useColorStore from '@/store/useColorStore';
-import { storeToRefs } from 'pinia';
 
 let colorStore = useColorStore();
-let { switchFlag } = storeToRefs(colorStore);
 
 // 切换皮肤点击事件
-const switchFlagChange = (flag:boolean) => {
-  
-  // 获取body属性
-  const body = document.body;
-  // body.style.transition = 'all .3s linear';
-  if(flag) {
-    body.style.background = '#fff';
-  } else {
-    body.style.background = '#000';
-  }
-  
+const switchFlagChange = (flag: boolean) => {
+  colorStore.changeTheme(flag);
 }
-
 </script>

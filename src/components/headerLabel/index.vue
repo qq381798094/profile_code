@@ -85,18 +85,14 @@
 
 <script setup lang="ts">
 // 引入API
-import { computed, defineEmits } from 'vue';
+import { computed, defineEmits, ref } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
-import useColorStore from '@/store/useColorStore';
-import { storeToRefs } from 'pinia';
 /** API实现 */
 let $router = useRouter();
 let $route = useRoute();
 let $emits = defineEmits(['switchChangeFlag']);
-const colorStore = useColorStore();
-// 使Pinia数据响应式化
-const { switchFlag } = storeToRefs(colorStore);
 
+const switchFlag = ref(false);
 
 // 切换页面功能
 let flag = computed(() => {
@@ -109,8 +105,8 @@ const changePage = (path: string) => {
     })
 }
 
-const switchChangeFlag = () => {
-    $emits('switchChangeFlag', switchFlag.value)
+const switchChangeFlag = (val: boolean) => {
+    $emits('switchChangeFlag', val)
 }
 
 </script>

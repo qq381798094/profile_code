@@ -8,8 +8,23 @@ const useColorStore = defineStore('color', {
     },
 
     actions: {
-        changeFlag() {
-            this.switchFlag = !this.switchFlag;
+        changeFlag(flag: boolean) {
+            this.switchFlag = flag;
+        },
+
+        changeTheme(flag: boolean) {
+            this.changeFlag(flag);
+
+            // 获取body属性
+            const body = document.body;
+            // body.style.transition = 'all .3s linear';
+            if(this.switchFlag) {
+                body.classList.add("theme_white")
+                body.style.background = '#fff';
+            } else {
+                body.classList.remove("theme_white")
+                body.style.background = '#000';
+            }
         }
     },
 
