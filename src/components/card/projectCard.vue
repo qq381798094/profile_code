@@ -43,11 +43,11 @@
     }
 
     :deep(.el-card__body) {
-        background: #000;
+        background: var(--theme-background);
     }
 
     :deep(.el-card) {
-        border: 1px solid #666;
+        border: 1px solid var(--theme-border-color);
     }
 
     .content-box {
@@ -62,11 +62,11 @@
                 margin-right: 5px;
 
                 &:first-child {
-                    color: #fff;
+                    color: var(--theme-title-text);
                 }
 
                 &:last-child {
-                    color: #9F9F9F;
+                    color: var(--theme-content-text);
                     margin-left: 10px;
                     min-width: 100px;
                     overflow: hidden;
@@ -88,7 +88,7 @@
             overflow: auto;
             text-indent: 1.85rem;
             line-height: 25px;
-            color: #9F9F9F;
+            color: var(--theme-content-text);
             transition: all .2s linear;
 
             &::-webkit-scrollbar {
@@ -105,18 +105,12 @@ import { defineProps, defineEmits, ref } from 'vue';
 /** 引入图标 */
 import { TopRight, WarnTriangleFilled } from '@element-plus/icons-vue';
 import type { IProjectItem } from '@/type/projectType.ts';
-/** 引入仓库 */
-import useColorStore from '@/store/useColorStore';
-import { storeToRefs } from 'pinia';
 
 /** 实例化API */
 const props = defineProps<{
     projectItem: IProjectItem
     currentIndex: number
 }>();
-
-const colorStore = useColorStore();
-const { switchFlag } = storeToRefs(colorStore);
 
 const $emit = defineEmits(['jumpClick']);
 

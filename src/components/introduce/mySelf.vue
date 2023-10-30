@@ -21,9 +21,9 @@
 
 <style scoped lang="less">
     .intro-my-self-box {
-        color: #99A19E;
+        color: var(--theme-content-text);
         > h1 {
-            color: #fff !important;
+            color: var(--theme-title-text) !important;
             font-size: 32px;
         }
         div {
@@ -41,7 +41,7 @@
                 &:nth-of-type(2n-1){
                     cursor: pointer;
                     &:hover {
-                        color: #fff;
+                        color: var(--theme-link-hover);
                     }
                 }
             }

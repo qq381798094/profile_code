@@ -8,6 +8,9 @@ const useColorStore = defineStore('color', {
     },
 
     actions: {
+        /*  
+            修改主题颜色方案1
+        */
         changeFlag(flag: boolean) {
             this.switchFlag = flag;
         },

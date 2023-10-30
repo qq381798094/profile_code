@@ -23,17 +23,18 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        color: #A3A2A1;
-
+        color: var(--theme-skill-color);
+        
         // 标题
         .title-and-subtle {
             min-width: 200px;
             display: flex;
             flex-direction: column;
+            
 
             &:hover {
                 cursor: pointer;
-                color: #fff;
+                color: var(--theme-link-hover);
                 -webkit-user-select: none;
             }
 

@@ -1,14 +1,14 @@
 <template>
   <div class="container">
     <!-- 头部标签 -->
-    <header-view @switchChangeFlag="switchFlagChange" />
+    <header-view />
     <!-- 身体标签 -->
     <router-view />
   </div>
 </template>
 
-<style scoped lang="less">
-
+<style lang="less">
+@import "@/assets/style/theme.css";
 .container {
   margin: 0 auto;
   max-width: 900px;
@@ -26,12 +26,5 @@
 <script setup lang="ts">
 import HeaderView from '@/components/headerLabel/index.vue';
 
-import useColorStore from '@/store/useColorStore';
 
-let colorStore = useColorStore();
-
-// 切换皮肤点击事件
-const switchFlagChange = (flag: boolean) => {
-  colorStore.changeTheme(flag);
-}
 </script>

@@ -22,7 +22,7 @@
         > h1 {
             margin: 25px 0;
             font-size: 24px;
-            color: #fff;
+            color: var(--theme-title-text);
         }
 
     }

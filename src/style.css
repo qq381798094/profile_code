@@ -98,7 +98,8 @@ a {
 }
 html,
 body {
-  background: #000;
+  background: var(--theme-background);
+  transition: all 0.2s linear;
 }
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {

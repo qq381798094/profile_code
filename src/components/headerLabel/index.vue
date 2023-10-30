@@ -30,7 +30,7 @@
     left: 0;
     z-index: 99;
     padding: 70px 0;
-    background: #000;
+    background: var(--theme-background);
 
     .header-box {
         display: flex;
@@ -39,11 +39,11 @@
 
         >span {
             >a {
-                color: #9D9D9C;
+                color: var(--theme-link-text);
                 cursor: pointer;
 
                 &:hover {
-                    color: #E1E1E1;
+                    color: var(--theme-link-hover);
                 }
             }
         }
@@ -56,19 +56,19 @@
 
             >li {
                 margin-right: 8px;
-                color: #959596;
+                color: var(--theme-link-text);
 
                 &:nth-of-type(2n-1) {
                     cursor: pointer;
                     font-size: 16px;
 
                     &:hover {
-                        color: #fff;
+                        color: var(--theme-link-hover);
                     }
                 }
 
                 &.active {
-                    color: #EFEFEF;
+                    color: var(--theme-link-active);
                 }
             }
 
@@ -106,7 +106,11 @@ const changePage = (path: string) => {
 }
 
 const switchChangeFlag = (val: boolean) => {
-    $emits('switchChangeFlag', val)
+    if(val) {
+        document.documentElement.className = "white";
+    } else {
+        document.documentElement.className = "dark";
+    }
 }
 
 </script>

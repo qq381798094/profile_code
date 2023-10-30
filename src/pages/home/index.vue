@@ -24,9 +24,9 @@
                         <template #reference>
                             <span style="text-decoration:underline;">扫描微信二维码</span>
                         </template>
-                        <img 
-			            style="width: 140px;=height: 140px;position: absolute;top: 5px;left: 5px;" 
-			            src="@/assets/wxScan.jpg" />
+                        <img
+                        style="width: 140px;=height: 140px;position: absolute;top: 5px;left: 5px;" 
+                        src="@/assets/wxScan.jpg" />
                     </el-popover>
                     取得联系。
                 </span>
@@ -50,11 +50,12 @@
         margin-top: 60px;
 
         >h1 {
+            color: var(--theme-title-text);
             font-size: 20px;
         }
 
-        .content-box {
-            color: #9F9F9F;
+        .concat-box {
+            color: var(--theme-content-text);
         }
     }
 
@@ -67,15 +68,15 @@
             margin: 30px 0;
 
             >span {
-                color: #9F9F9F;
+                color: var(--theme-content-text);
                 font-size: 15px;
 		position:relative;
 
                 a {
-                    color: #9F9F9F;
+                    color: var(--theme-content-text);
 
                     &:hover {
-                        color: #fff;
+                        color: var(--theme-link-hover);
                     }
                 }
             }
@@ -83,6 +84,7 @@
 
         >h1 {
             font-size: 20px;
+            color: var(--theme-title-text);
         }
     }
 
@@ -90,7 +92,7 @@
         display: flex;
 
         >li {
-            color: #99A19E;
+            color: var(--theme-content-text);
             font-size: 16px;
             margin-right: 8px;
 
@@ -98,7 +100,7 @@
                 cursor: pointer;
 
                 &:hover {
-                    color: #fff;
+                    color: var(--theme-link-hover);
                 }
             }
         }
