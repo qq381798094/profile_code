@@ -3,7 +3,7 @@
     <!-- 头部标签 -->
     <header-view />
     <!-- 身体标签 -->
-    <router-view />
+    <router-view style="max-width: 900px;margin: 0 auto;" />
   </div>
 </template>
 
@@ -11,7 +11,6 @@
 @import "@/assets/style/theme.css";
 .container {
   margin: 0 auto;
-  max-width: 900px;
   height: 100%;
 }
 

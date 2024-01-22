@@ -12,12 +12,23 @@
             :project-item="project"
             @jumpClick="handleJumpClick" />
         </div>
+        <!-- 小 demo 集合 -->
+        <!-- <div class="demo-list-box">
+            <h1>小 Demo 集合({{ demoArr.length }})</h1>
+            <ProjectView
+            v-for="(demo, index) in demoArr"
+            :key="demo.id"
+            :current-index="index"
+            :project-item="demo"
+            @jump-click="handleJumpClick"
+            />
+        </div> -->
         <!-- 取得联系 -->
         <div class="concat-box">
             <h1>取得联系</h1>
             <div class="content">
                 <span>
-                    可以通过邮箱<a href="mailto:hzy381798094@163.com">hzy381798094@163.com</a>或者
+                    可以通过邮箱<a href="mailto:hzy381798094@163.com"> hzy381798094@163.com </a>或者
                     <el-popover
                     popper-style="width:150px;height:150px;"
                     placement="top">
@@ -46,7 +57,8 @@
     padding: 20px 0 70px 0;
 
     // 项目集合
-    .project-list-box {
+    .project-list-box,
+    .demo-list-box {
         margin-top: 60px;
 
         >h1 {
@@ -117,7 +129,8 @@ import { ElMessageBox } from 'element-plus'
 import MySelfView from '@/components/introduce/mySelf.vue';
 import ProjectView from '@/components/card/projectCard.vue';
 /** 引入数据类型约束 */
-import type { TProjectArr } from '@/type/projectType.ts';
+import type { TProjectArr } from '@/type/projectType';
+// import type { IDemoItem } from '@/type/demoType'
 
 /* 项目对象 */
 
@@ -127,14 +140,14 @@ const projectArr = ref<TProjectArr>([
         pName: '博客',
         tech: 'Vue全家桶 + Axios + Less',
         link: 'github.com/qq381798094/Mock_Blog',
-        introduce: '个人博客网页为Vue2学习之后实践的产品。该博客主要使用Vue2全家桶技术栈，使用Axios实现前后端异步通信效果，使用Mock模拟数据充实网页界面。人博客含有首页、文章、关于、技术分析、留言板等模块。首页模块含有轮播图、以及根据鼠标位置移动图片的效果。文章模块含有对文章的分类，以及分页器的应用，点击文章会进入文章详情，详情页面除了含有内容外还含有当前内容的关键词锚点。关于模块放置了代码块技术分析主要是对列表进行了渲染、图片渲染上使用了懒加载技术。留言板会展示用户留言以及提供留言功能，提交后能够更新留言板。',
+        introduce: '个人博客网页为 Vue2.x 学习之后实践的产品。该博客主要使用 Vue2.x 全家桶技术栈，使用 Axios 实现前后端异步通信效果，使用Mock模拟数据充实网页界面。人博客含有首页、文章、关于、技术分析、留言板等模块。首页模块含有轮播图、以及根据鼠标位置移动图片的效果。文章模块含有对文章的分类，以及分页器的应用，点击文章会进入文章详情，详情页面除了含有内容外还含有当前内容的关键词锚点。关于模块放置了代码块技术分析主要是对列表进行了渲染、图片渲染上使用了懒加载技术。留言板会展示用户留言以及提供留言功能，提交后能够更新留言板。',
     },
     {
         id: 2,
         pName: '医院预约挂号平台',
         tech: 'Vue3.0 + TypeScript + Element-Plus UI + Axios + Sass',
         link: 'github.com/qq381798094/Regisitration_Platform',
-        introduce: '挂号平台是在实践Vue3 + TypeScript技术栈的时候开发的一款网站。主要技术栈为Vue3 + TypeScript + Pinia，UI库为 Element-Plus UI。'
+        introduce: '挂号平台是在实践 Vue3 + TypeScript 技术栈的时候开发的一款网站。主要技术栈为 Vue3 + TypeScript + Pinia，UI库为 Element-Plus UI。'
     },
     {
         id: 3,
@@ -142,8 +155,26 @@ const projectArr = ref<TProjectArr>([
         tech: 'uniapp + Vant UI + Less',
         link: null,
         introduce: '寻谱是之前写的一个微信小程序，是用的微信小程序原生开发的，只是暂时没有将资源上传到 github / gitee 上。寻谱所用到的技术栈主要为微信小程序、Vant UI组件库以及Less样式语言组成。小程序模块有四个，分别是首页、曲谱、用户、以及视频模块。   '
-    }
+    },
+    {
+        id: 4,
+        pName: '小兔鲜',
+        tech: 'uniapp 应用',
+        link: 'https://github.com/qq381798094/C-Vue3-TS-',
+        introduce: '小兔鲜是由 Vue3 + TypeScript 技术栈所开发的电商平台（小程序），主要模块包括猜你喜欢、热门推荐、商品分类、商品详情、用户管理、地址管理、购物车管理、订单管理等功能。开发过程中也会根据需求进行公共组件封装和复用。'
+    },
 ])
+
+/** 小 demo 数组对象 */
+// const demoArr = ref<IDemoItem[]>([
+    // {
+    //     id: 1,
+    //     pName: 'Todo List',
+    //     tech: 'Vue3.x + TypeScript',
+    //     link: undefined,
+    //     introduce: 'xxx'
+    // }
+// ])
 
 // 项目点击事件：跳转到gitee or github的项目
 const handleJumpClick = (link: string | null) => {

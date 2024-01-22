@@ -24,8 +24,9 @@
 
 <style scoped lang="less">
 .header-label-component-container {
+    width: 100%;
     position: sticky;
-    margin: 0 auto;
+    
     top: 0;
     left: 0;
     z-index: 99;
@@ -33,8 +34,11 @@
     background: var(--theme-background);
 
     .header-box {
+        max-width: 900px;
+        margin: 0 auto;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         font-size: 15px;
 
         >span {
@@ -113,4 +117,9 @@ const switchChangeFlag = (val: boolean) => {
     }
 }
 
+</script>
+<script lang="ts">
+export default {
+    name: 'Header'
+}
 </script>

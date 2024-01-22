@@ -7,10 +7,6 @@ export default [
         path: '/skill',
         component: () => import('@/pages/posts/index.vue'),
     },
-    {
-        path: '/demo',
-        component: () => import('@/pages/demo/index.vue'),
-    },
     // 重定向
     {
         path: '/',
